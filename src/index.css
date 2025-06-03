@@ -1,0 +1,6 @@
+@import "mapbox-gl/dist/mapbox-gl.css";
+@import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
+
+/* full-screen map */
+html, body, #root { height: 100%; margin: 0; }
+.map-container       { height: 100%; width: 100%; }
