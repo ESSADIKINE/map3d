@@ -9,12 +9,11 @@
     <title>React-Map3D</title>
   </head>
 
-  <div id="root"></div>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 
-  <!-- Threebox UMD build — يجب أن يحمَّل قبل React bundle -->
-  <script src="%PUBLIC_URL%/libs/threebox.js"></script>
-  <!-- نضيف alias tb حتى لا يشتكي الكود الداخلي -->
-  <script>
-    window.tb = window.Threebox;
-  </script>
+    <!-- ✅ Threebox UMD build (after you place it in /public/libs) -->
+    <script src="%PUBLIC_URL%/libs/threebox.js"></script>
+  </body>
 </html>
