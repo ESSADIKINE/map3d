@@ -148,7 +148,7 @@ export default function App() {
           setLoading(false);
         })
         .catch((e) => {
-          setError("Model loading error: " + e.message);
+          //setError("Model loading error: " + e.message);
           setLoading(false);
         });
       });
