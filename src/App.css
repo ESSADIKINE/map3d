@@ -1,6 +1,6 @@
 .map-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -17,39 +17,47 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: white;
-  font-family: Arial, sans-serif;
-  z-index: 9999;
+  z-index: 1000;
 }
 
-.loading-content {
-  text-align: center;
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .error-message {
   position: absolute;
-  top: 50%;
+  top: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: #ff4444;
   color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
   z-index: 1000;
   max-width: 80%;
+  text-align: center;
 }
 
-/* Adjust directions control styling */
-.mapboxgl-ctrl.mapboxgl-ctrl-directions {
-  width: 350px;
-  max-width: 90%;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.mapbox-directions-component-keyline {
-  display: none;
+.error-message button {
+  margin-left: 10px;
+  background: white;
+  color: #ff4444;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }
